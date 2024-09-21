@@ -17,12 +17,15 @@
 	left: 0; right: 0;
 	top: -250px;
 	height: 250px;
-	overflow-x: hidden;
 	padding-right: 1rem;  
 	
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
+}
+#text-container .message:first-child {
+	flex: 1 1 auto;
+    /* use !important to prevent breakage from child margin settings */
 }
 
 .speech-bubble{
