@@ -18,20 +18,17 @@ await initializeAssistant2();
 
 
 async function initializeAssistant1(){
-    
 	assistant1 = await retrieveAssistantById(import.meta.env.VITE_ASSISTANT_ID_1);
 	thread1 = await openai.beta.threads.create(); 
 }
 
 
 async function initializeAssistant2(){
-    
 	assistant2 = await retrieveAssistantById(import.meta.env.VITE_ASSISTANT_ID_2);
 	thread2 = await openai.beta.threads.create();
 }
   
 console.log("Assistants initialisés"); 
-
 
 startConversationWithCharacter1("Demande moi qui je suis.");
 
@@ -70,7 +67,7 @@ async function startConversationWithCharacter1(message){
 		
 		setTimeout(() => {
 			startConversationWithCharacter2(responseToCharacter2); 
-		}, 3000); 
+		}, 6000); 
 	});
 }
 
@@ -103,7 +100,7 @@ async function startConversationWithCharacter2(message){
 		
 		setTimeout(() => {
 			startConversationWithCharacter1(responseToCharacter1); 
-		}, 3000); 
+		}, 6000); 
 	});
 }
 
