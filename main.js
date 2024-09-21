@@ -40,7 +40,6 @@ async function retrieveAssistantById(assistantId) {
 
 
 async function startConversationWithCharacter1(message){
-	
 	let userMessage = await openai.beta.threads.messages.create(thread1.id, {
 		role: "user", 
 		content: message 
@@ -73,7 +72,6 @@ async function startConversationWithCharacter1(message){
 
 
 async function startConversationWithCharacter2(message){
-	
 	let userMessage = await openai.beta.threads.messages.create(thread2.id, {
 		role: "user", 
 		content: message 
